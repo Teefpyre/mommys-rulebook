@@ -1,0 +1,223 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #root {
+    min-height: 100%;
+  }
+
+  body {
+    font-family: 'Nunito', ui-rounded, system-ui, sans-serif;
+    color: #462e35;
+    background-color: #fcecef;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: #f9d2df;
+    color: #462e35;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Quicksand', 'Nunito', ui-rounded, system-ui, sans-serif;
+  }
+
+  .font-hand {
+    font-family: 'Quicksand', 'Nunito', ui-rounded, system-ui, sans-serif;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.desk-backdrop {
+  background-color: #efd7de;
+  background-image:
+    radial-gradient(ellipse 60% 52% at 50% 42%, rgba(255, 253, 251, 0.9) 0%, rgba(255, 253, 251, 0) 70%),
+    radial-gradient(ellipse 135% 115% at 50% 46%, rgba(96, 44, 62, 0) 50%, rgba(96, 44, 62, 0.17) 100%),
+    repeating-linear-gradient(0deg, rgba(140, 64, 90, 0.04) 0 1px, rgba(140, 64, 90, 0) 1px 4px),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.22) 0 1px, rgba(255, 255, 255, 0) 1px 4px);
+  background-attachment: fixed;
+}
+
+.paper-surface {
+  background-color: #ffffff;
+  background-image: radial-gradient(ellipse 85% 75% at 50% 45%, #ffffff 48%, rgba(255, 246, 248, 0.55) 100%);
+}
+
+.book-gutter-left {
+  box-shadow:
+    inset -44px 0 42px -24px rgba(185, 105, 132, 0.22),
+    inset -12px 0 16px -8px rgba(145, 72, 98, 0.16),
+    inset 26px 0 32px -20px rgba(244, 178, 199, 0.22),
+    inset 0 24px 30px -20px rgba(244, 178, 199, 0.18),
+    inset 0 -24px 30px -20px rgba(244, 178, 199, 0.18);
+}
+
+.book-gutter-right {
+  box-shadow:
+    inset 44px 0 42px -24px rgba(185, 105, 132, 0.22),
+    inset 12px 0 16px -8px rgba(145, 72, 98, 0.16),
+    inset -26px 0 32px -20px rgba(244, 178, 199, 0.22),
+    inset 0 24px 30px -20px rgba(244, 178, 199, 0.18),
+    inset 0 -24px 30px -20px rgba(244, 178, 199, 0.18);
+}
+
+.book-page-mobile {
+  box-shadow:
+    inset 22px 0 28px -18px rgba(185, 105, 132, 0.16),
+    inset -22px 0 28px -18px rgba(244, 178, 199, 0.2),
+    inset 0 20px 26px -18px rgba(244, 178, 199, 0.18),
+    inset 0 -20px 26px -18px rgba(244, 178, 199, 0.18);
+}
+
+.cloth {
+  background-color: #eaa4bc;
+  background-image:
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.14) 0 1px, rgba(255, 255, 255, 0) 1px 3px),
+    repeating-linear-gradient(0deg, rgba(150, 62, 88, 0.09) 0 1px, rgba(150, 62, 88, 0) 1px 3px),
+    radial-gradient(circle at 32% 12%, rgba(255, 252, 253, 0.38) 0%, transparent 60%),
+    linear-gradient(158deg, #f3b7c8 0%, #eaa4bc 55%, #dd8ea6 100%);
+}
+
+.label-plate {
+  background-color: #ffffff;
+  box-shadow:
+    inset 0 0 0 1px #f0c3d2,
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    inset 0 -1px 0 rgba(240, 195, 210, 0.35),
+    0 1px 0 rgba(255, 255, 255, 0.9),
+    0 12px 26px -14px rgba(110, 52, 72, 0.28);
+}
+
+.page-stack {
+  background-color: #ffffff;
+  background-image: repeating-linear-gradient(90deg, #ffffff 0 2px, #f0dde4 2px 3px);
+}
+
+.open-pages-frame {
+  background-color: #ffffff;
+  box-shadow:
+    0 0 0 1px rgba(210, 145, 165, 0.38),
+    -4px 0 0 -1px #ffffff,
+    -5px 0 0 -1px rgba(210, 145, 165, 0.32),
+    4px 0 0 -1px #ffffff,
+    5px 0 0 -1px rgba(210, 145, 165, 0.32),
+    0 4px 0 -1px #ffffff,
+    0 5px 0 -1px rgba(210, 145, 165, 0.32),
+    0 10px 20px -4px rgba(110, 52, 72, 0.18);
+}
+
+.sticky-note {
+  background: linear-gradient(180deg, #ffffff 0%, #fffdfa 100%);
+  border: 1px solid rgba(244, 198, 213, 0.85);
+  box-shadow:
+    0 1px 2px rgba(110, 52, 72, 0.05),
+    0 12px 22px -16px rgba(110, 52, 72, 0.32);
+}
+
+.lined-paper {
+  background-color: #ffffff;
+  background-image:
+    linear-gradient(90deg, transparent 28px, rgba(244, 178, 199, 0.45) 28px 29px, transparent 29px),
+    repeating-linear-gradient(transparent 0 27px, rgba(244, 178, 199, 0.24) 27px 28px);
+  background-position: 0 0, 0 6px;
+  background-size: 100% 100%, 100% 100%;
+  background-attachment: local, local;
+  border: 1px solid #f4c6d5;
+}
+
+.ribbon-tab-tail {
+  clip-path: polygon(0 0, 100% 0, 91% 50%, 100% 100%, 0 100%);
+}
+
+.ribbon-band {
+  clip-path: polygon(0 0, 100% 0, calc(100% - 13px) 50%, 100% 100%, 0 100%, 13px 50%);
+}
+
+.ribbon-v-tail {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 82%, 0 100%);
+}
+
+.ribbon-sheen {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.34) 0%,
+    rgba(255, 255, 255, 0.08) 34%,
+    rgba(255, 255, 255, 0) 55%,
+    rgba(110, 52, 72, 0.1) 100%
+  );
+}
+
+.type-press {
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.75),
+    0 -0.5px 0 rgba(110, 52, 72, 0.08);
+}
+
+.page-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(223, 104, 141, 0.25) transparent;
+  scrollbar-gutter: stable;
+}
+
+.page-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+
+.page-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.page-scroll::-webkit-scrollbar-thumb {
+  background: rgba(223, 104, 141, 0.22);
+  border-radius: 9999px;
+}
+
+.page-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(223, 104, 141, 0.4);
+}
+
+.book-perspective {
+  perspective: 1800px;
+}
+
+@keyframes seal-idle-dance {
+  0% { transform: translateY(0) rotate(0deg) scale(1); }
+  15% { transform: translateY(-7px) rotate(-14deg) scale(1.12); }
+  30% { transform: translateY(2px) rotate(10deg) scale(0.9); }
+  45% { transform: translateY(-4px) rotate(-8deg) scale(1.06); }
+  60% { transform: translateY(1px) rotate(6deg) scale(0.97); }
+  80% { transform: translateY(0) rotate(-3deg) scale(1.03); }
+  100% { transform: translateY(0) rotate(0deg) scale(1); }
+}
+
+.seal-idle-dance {
+  animation: seal-idle-dance 1.6s ease-in-out 0.9s infinite;
+  transform-origin: 50% 60%;
+  will-change: transform;
+}
+
+@keyframes seal-ring-ping {
+  0% { transform: scale(0.7); opacity: 0; }
+  30% { opacity: 0.55; }
+  100% { transform: scale(1.35); opacity: 0; }
+}
+
+.seal-ring-ping {
+  animation: seal-ring-ping 1.6s ease-out 0.9s infinite;
+  will-change: transform, opacity;
+}
+
+.seal-ring-ping-delayed {
+  animation: seal-ring-ping 1.6s ease-out 1.25s infinite;
+  will-change: transform, opacity;
+}
